@@ -52,6 +52,7 @@
 
 ## Dependency Diagram & Normalization: 1NF → 3NF
 <img width="963" height="315" alt="image" src="https://github.com/user-attachments/assets/982c6657-6341-4dcb-9aa3-60f38b4e66b0" />
+
 ### 1NF Status
 - **Atomic attributes**: Customer_Name, Amount (no multi-valued fields)
 - **Single-column PKs**: Customer_ID, Claim_ID, Covered_Item_ID
@@ -71,6 +72,7 @@
 
 ## 2NF Status
 <img width="1156" height="454" alt="image" src="https://github.com/user-attachments/assets/4b5f2714-2f2c-4ee1-8060-8f567fb14801" />
+
 ### Partial Dependency Anomalies (Avoided)
 - **Insertion**: No dummy/nulls for partial-key attrs  
 - **Update**: No multi-tuple propagation risks  
@@ -84,8 +86,9 @@
 
 ## Entity Relationship Diagram for the company AAIM
 <img width="871" height="405" alt="image" src="https://github.com/user-attachments/assets/9c42f573-b471-4eff-8f07-8634072dd955" />
-The Entity-Relationship Diagram (ERD) for AAMI incorporates a CUSTOMER_CLAIM associative entity to resolve the many-to-many relationship between Customer and Claim, converting it into two one-to-many relationships. This supports realistic insurance scenarios, such as joint claims and multiple insured parties, where each claim involves one or more customers, and each customer may have multiple claims.
-Key relationships include:
+
+**The Entity-Relationship Diagram (ERD)** for AAMI incorporates a CUSTOMER_CLAIM associative entity to resolve the many-to-many relationship between Customer and Claim, converting it into two one-to-many relationships. This supports realistic insurance scenarios, such as joint claims and multiple insured parties, where each claim involves one or more customers, and each customer may have multiple claims.
+**Key relationships include**:
 - Customer → CoveredItem (1:N): One customer insures multiple assets; each item has single ownership
 - CoveredItem → Claim (1:N): Multiple claims possible per asset over time
 - Claim → Discount (N:1, optional): Efficient discount sharing reduces redundancy
