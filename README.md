@@ -1,4 +1,5 @@
 <img width="1200" height="419" alt="image" src="https://github.com/user-attachments/assets/78ba1248-ee81-4fec-9415-32a259ecf80f" />
+
 # Mini Project – AAMI Insurance Operations (Policy & Claims Lifecycle)
 ## What have I done?
 - Analysed end‑to‑end insurance operations for AAMI, covering policy management, customer management, claims processing, payments/billing, discounts, and SME business insurance.
