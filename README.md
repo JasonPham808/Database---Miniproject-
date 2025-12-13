@@ -9,8 +9,9 @@
 ## Overview of the company AAMI (Australian Associated Motor Insurers Limited)
 **Company Overview**  
 - Leading Australian insurer for individuals/SMEs; motor, home/contents, landlord, travel, business, life/income protection, pet, CTP products.  
-- Multi-channel: online portals, phone support.  
-**Key Data Entities**  
+- Multi-channel: online portals, phone support.
+
+**Key Data Entities**
 - **Customer**: Profiles (personal/business details, contacts, preferences), multi-policy links, account status.  
 - **Policy**: Type (car/home/business), coverage details, premiums (risk-based calc: assets/drivers/location/claims), excess, payment plans, dates (effective/expiry). 
 - **Claims**: Lodgement (incidents/evidence), assessment (damage/validity/quotations), settlement (approval/payment/repairs), express claims, tracking.  
@@ -63,20 +64,24 @@
 - **Transitive Dependencies**: 
   - DiscountDescription → DiscountID
   - ClaimHandlerName → Staff entity (3NF violation)
+
 ### Normalization Path
 - **2NF**: Achieved (no partial dependencies, single PKs)
 - **3NF**: Extract Discount/ClaimHandler entities
+
 ## 2NF Status
 <img width="1156" height="454" alt="image" src="https://github.com/user-attachments/assets/4b5f2714-2f2c-4ee1-8060-8f567fb14801" />
 ### Partial Dependency Anomalies (Avoided)
 - **Insertion**: No dummy/nulls for partial-key attrs  
 - **Update**: No multi-tuple propagation risks  
 - **Deletion**: No orphaned partial-key data  
+
 ## 3NF Status
 ### Transitive Dependency Anomalies (RESOLVED)
 - **Insertion**: Discounts now independent of policies ✓
 - **Update**: Single discount update propagates via FK ✓  
 - **Deletion**: Policy delete preserves discount data ✓
+
 ## Entity Relationship Diagram for the company AAIM
 <img width="871" height="405" alt="image" src="https://github.com/user-attachments/assets/9c42f573-b471-4eff-8f07-8634072dd955" />
 The Entity-Relationship Diagram (ERD) for AAMI incorporates a CUSTOMER_CLAIM associative entity to resolve the many-to-many relationship between Customer and Claim, converting it into two one-to-many relationships. This supports realistic insurance scenarios, such as joint claims and multiple insured parties, where each claim involves one or more customers, and each customer may have multiple claims.
