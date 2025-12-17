@@ -12,5 +12,12 @@ Perfect for demonstrating full-stack LAMP development, form validation, and secu
 - Backend: PHP (form processing + SQL insertion)
 - Frontend: HTML5 + CSS3 (responsive form)
 - Tools: phpMyAdmin, VS Code/Notepad++
-                       
+##Key Fields
+- id – Auto-increment PK
+- username – Login identifier
+- email – Verification + notifications
+- phone – Contact/MFA channel
+- subscription – Service tier
+- payment_plan – Billing configuration 
+
                        
