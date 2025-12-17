@@ -19,5 +19,14 @@ Perfect for demonstrating full-stack LAMP development, form validation, and secu
 - phone – Contact/MFA channel
 - subscription – Service tier
 - payment_plan – Billing configuration 
-
-                       
+##Quick Start
+- Install XAMPP → Start Apache + MySQL
+- phpMyAdmin → Create aami_db + users table
+- htdocs → Drop index.html + process.php
+- localhost/aami → Experience branded AAMI form
+##Learning Outcomes
+- AAMI-branded UI/UX with enterprise color scheme + logo
+- End-to-end CRUD insertion workflow
+- PHP sanitization + SQL injection prevention
+- Production SQL fundamentals through secure operations
+- XAMPP mastery for LAMP development
