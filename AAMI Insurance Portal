@@ -1,0 +1,16 @@
+#AAMI Insurance Portal - User Registration Web Interface
+Tech Demo: Secure User Sign-up Flow with PHP + MySQL
+This project delivers a production-ready web interface for inserting new user records into the users table of the AAMI insurance portal database. 
+Perfect for demonstrating full-stack LAMP development, form validation, and secure database insertion.
+##Project Focus
+- Target Table: users (core table for insurance portal sign-ups)
+- Core Functionality: HTML form → PHP validation → MySQL insertion
+- Use Case: Customer onboarding with username, email, phone, subscription, and payment plan capture
+##Tech Stack
+- Web Server: XAMPP (Apache + MariaDB/MySQL + PHP)
+- Database: MySQL (MariaDB)
+- Backend: PHP (form processing + SQL insertion)
+- Frontend: HTML5 + CSS3 (responsive form)
+- Tools: phpMyAdmin, VS Code/Notepad++
+                       
+                       
