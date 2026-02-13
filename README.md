@@ -94,3 +94,61 @@
 - Claim → Discount (N:1, optional): Efficient discount sharing reduces redundancy
 - Claim → ClaimHandler (N:1): Single handler accountability
 - Participation constraints: Mandatory (CoveredItem→Customer, Claim→≥1 Customer via assoc entity); optional (Claim→Discount). This normalized, scalable ERD enables effective policy management and claims administration for AAMI's operations
+
+##AAMI User Interface
+**Web server package and technologies/tools used**
+- Web Server Package: XAMPP (includes Apache, MariaDB/MySQL, PHP,
+phpMyAdmin).
+- Database System: MySQL (via MariaDB in XAMPP).
+- Scripting Language: PHP (server-side processing).
+- Frontend Technologies: HTML5, CSS3.
+- Development Tools: phpMyAdmin (for database management), Visual Studio Code /
+- Notepad++ (for editing PHP scripts).
+**State of the database table before attempting insertion**
+  The users table structure includes:
+- Created a database called aami_db in phpMyAdmin.
+- Created a users table with the following fields:
+● id (auto-increment primary key)
+● username
+● email
+● Phone
+● subscription
+● payment_plan
+<img width="593" height="280" alt="image" src="https://github.com/user-attachments/assets/46f93169-00d3-490b-91f2-4173c9ad9087" />
+
+**Frontend Set Up (Form design)**
+- Designed a clean, branded form for AAMI (Australian Associated Motor Insurers
+Limited).
+- Used red and white as per AAMI’s brand colors.
+- Added the AAMI logo at the top of the form.
+- Included input fields for Username, Email, Phone, Subscription type, and Payment
+plan.
+<img width="537" height="360" alt="image" src="https://github.com/user-attachments/assets/6eee2221-8394-4a71-a228-83d5c912cd64" />
+Front End Output:
+<img width="342" height="349" alt="image" src="https://github.com/user-attachments/assets/cd70d6dc-1cf1-499e-8619-7b149c1a6a3f" />
+
+**Backend Implementation and Logic**
+- PHP scripts process input and validate:
+● All fields are required for submission.
+● Email input must adhere to a valid format (e.g., example@email.com).
+● Phone number must conform to the Australian format, either (+61 or 0 prefix).
+● If validation encounters any errors, an appropriate error message will be presented alongside a
+“Try Again” button.
+● Upon successful validation, the data will be persisted in the database, and a confirmation
+message indicating success will be presented to the user interface.
+- Back-end code:
+<img width="436" height="303" alt="image" src="https://github.com/user-attachments/assets/31642da2-9040-4095-b1a3-9c434ed63101" />
+- Back-end output:
+<img width="572" height="415" alt="image" src="https://github.com/user-attachments/assets/be063c91-16d4-4b9a-af45-1d849126e367" />
+##Demonstration
+Invalid data, such as a malformed email or a duplicate username, triggers error messages, and the database remains unchanged.
+Form Input Example (invalid):
+● Username: Jason
+● Email: Jas (Missing an '@')
+● Phone: 0410232987
+● Subscription: Travel
+● Payment Plan: Quarterly
+● Validation Result: blank
+<img width="363" height="374" alt="image" src="https://github.com/user-attachments/assets/2dfb677d-ad2c-45d1-be91-d68b9eb58bed" />
+
+When duplicate data entries exist in the database, the validation messages will indicate: 'The username is already taken. Please choose another one,' or 'The email address is already registered.' Therefore, the information will not be inserted into the database. Once all valid and unique data is submitted, the user will see 'New account created successfully!' and the record will be inserted into the database, as verified in phpMyAdmin. Watch a full demonstration from my YouTube link here <https://www.youtube.com/watch?v=iG1FJhY35FY >
