@@ -124,7 +124,9 @@ Limited).
 - Included input fields for Username, Email, Phone, Subscription type, and Payment
 plan.
 <img width="537" height="360" alt="image" src="https://github.com/user-attachments/assets/6eee2221-8394-4a71-a228-83d5c912cd64" />
+
 Front End Output:
+
 <img width="342" height="349" alt="image" src="https://github.com/user-attachments/assets/cd70d6dc-1cf1-499e-8619-7b149c1a6a3f" />
 
 **Backend Implementation and Logic**
@@ -138,9 +140,12 @@ Front End Output:
 message indicating success will be presented to the user interface.
 - Back-end code:
 <img width="436" height="303" alt="image" src="https://github.com/user-attachments/assets/31642da2-9040-4095-b1a3-9c434ed63101" />
+
 - Back-end output:
+
 <img width="572" height="415" alt="image" src="https://github.com/user-attachments/assets/be063c91-16d4-4b9a-af45-1d849126e367" />
-##Demonstration
+
+## Demonstration
 Invalid data, such as a malformed email or a duplicate username, triggers error messages, and the database remains unchanged.
 Form Input Example (invalid):
 ● Username: Jason
@@ -149,6 +154,8 @@ Form Input Example (invalid):
 ● Subscription: Travel
 ● Payment Plan: Quarterly
 ● Validation Result: blank
+
 <img width="363" height="374" alt="image" src="https://github.com/user-attachments/assets/2dfb677d-ad2c-45d1-be91-d68b9eb58bed" />
 
 When duplicate data entries exist in the database, the validation messages will indicate: 'The username is already taken. Please choose another one,' or 'The email address is already registered.' Therefore, the information will not be inserted into the database. Once all valid and unique data is submitted, the user will see 'New account created successfully!' and the record will be inserted into the database, as verified in phpMyAdmin. Watch a full demonstration from my YouTube link here <https://www.youtube.com/watch?v=iG1FJhY35FY >
+
